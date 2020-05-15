@@ -1,0 +1,16 @@
+@import './variables';
+@import './header';
+
+//Can replace with above nested style
+//header button {
+//background: greenyellow;
+//background: $pirmaryBtn;
+//}
+
+.contact button {
+    //background: greenyellow;
+    //background: $pirmaryBtn;
+    //@include flexCenter(column, greenyellow);
+    @extend header; // Inherit header styles here
+    height: 10ex;//Override the hight value from the extended header
+}

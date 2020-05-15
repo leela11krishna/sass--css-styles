@@ -1,0 +1,23 @@
+//Similar to javascript function, it can be reused in other places
+@mixin flexCenter($direction, $background) {
+    background-color: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}   
+
+header {
+    @include  flexCenter(column, orange);
+    //background: lightblue;
+    height: 100ex;
+    color: $txtColor;
+    //Nest button
+    button {
+        //Using SASS we can variables to define colors in multiple location, easy to maintain at one place.
+        background: $pirmaryBtn;
+        &:hover {
+            background: blue($color: #000000);
+        }
+    }
+}
